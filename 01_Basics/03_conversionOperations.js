@@ -20,3 +20,19 @@ let num=88
 let stringNum=String(num)
 console.log(stringNum)
 console.log(typeof stringNum)
+
+
+//***************Operations*******
+let v=3
+let negv=-v
+console.log(negv)
+
+let str1="Hello"
+let str2=" Hitesh"
+let str3=str1+str2
+console.log(str3)
+
+console.log("1"+2)
+console.log(1+"2")
+console.log("1"+2+2)
+console.log(1+2+"2")
