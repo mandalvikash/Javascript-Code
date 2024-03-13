@@ -40,3 +40,26 @@ const myfunction=function() {
 //checking type of
 
 console.log(typeof bigNumber);
+
+
+
+
+//*******************************MEMORY***************
+
+//Stack(Primitive)
+//Heap(Non-Primitive)
+
+let myYoutubename="vikashmandaldotcom"
+let anothename="chaiorcode"
+
+console.log(myYoutubename);//vikashmandaldotcom
+console.log(anothename);//chaiorcode
+
+let userOne={
+    email:"user@google.com",
+    user:"user@ybl"
+}
+let userTwo=userOne
+userTwo.email="vikashmanda451@gmail.com"
+console.log(userOne.email)//vikashmanda451@gmail.com
+console.log(userTwo.email)//vikashmanda451@gmail.com
