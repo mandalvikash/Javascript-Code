@@ -17,3 +17,5 @@ let isLoged=true
 //undefined
 //symbol=>unique
 
+console.log(typeof(undefined))//undefined
+console.log(typeof(null))//obeject
