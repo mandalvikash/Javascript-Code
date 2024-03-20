@@ -76,3 +76,27 @@ console.log(Object.values(tinderUser))//[ '123abc', 'Sammy', false ]
 console.log(Object.entries(tinderUser))//[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false ] ]
 
 console.log(tinderUser.hasOwnProperty("isLoggedIn"))//true
+
+
+//Destructuring
+const course={
+    coursename:"JS in Hindi",
+    price:"999",
+    courseInstructor:"Hitesh"
+}
+console.log(course.courseInstructor)//Hitesh
+
+ const {courseInstructor}=course
+console.log(courseInstructor)//Hitesh
+
+const {courseInstructor:Instructor}=course
+console.log(Instructor)//Hitesh
+
+
+//API's
+{
+    "name":"Vikash",
+    "coursename":"JS in English",
+    "price":"Free"
+
+}
