@@ -12,12 +12,12 @@ if(userEmsil){
 //true,"0","false"," ",[],{},function(){}
 
 
-if(userEmsil.length==0){
-    console.log("Array is empty")
+if(userEmsil.length===0){
+    console.log("Array is empty");
 }
 
 const emptyObj={}
 
-if(Object.keys(emptyObj).length==0){
-    console.log("Object is empty")
+if(Object.keys(emptyObj).length===0){
+    console.log("Object is empty");
 }
