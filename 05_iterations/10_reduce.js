@@ -4,3 +4,11 @@ const myTotal=myNum.reduce(function(acc,currval){
     return acc+currval
 },0)
 console.log(myTotal)
+
+
+
+const myT2=myNum.reduce((ac,curv)=>{
+    console.log(`ac:${ac} and curv:${curv}`)
+    return ac+curv
+},0)
+console.log(myT2)
