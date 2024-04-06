@@ -19,5 +19,5 @@ buttons.forEach(function(button){
         }else if(event.target.id==='purple'){
             body.style.backgroundColor=event.target.id;
         }
-    })
+    });
 });
