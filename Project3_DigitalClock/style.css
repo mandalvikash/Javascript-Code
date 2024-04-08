@@ -1,0 +1,9 @@
+body{
+     background-color: #212121;
+         color: #fff;
+ }
+ .center{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        }
