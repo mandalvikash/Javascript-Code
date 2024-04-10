@@ -1,10 +1,10 @@
-const randomNumber=parseInt(Math.random()*100+1)
+let randomNumber=parseInt(Math.random()*100+1)
 const submit=document.querySelector('#subt')
 const userInput=document.querySelector('#guessField')
 const guessSlot=document.querySelector('.guesses')
 const remaining=document.querySelector('.lastResult')
 const lowOrHi=document.querySelector('.loworHi')
-const startOver=document.querySelector('.resultParas')
+const startOver=document.querySelector('.resultPass')
 
 
 const p=document.createElement('p')
@@ -31,6 +31,7 @@ function validateGuess(guess){
    }else{
     prevGuess.push(guess)
     if(numGuess===11){
+        console.log(numGuess)
         displayGuess(guess)
         displayMessage(`Game over Random numebr was ${randomNumber}`)
         endGame()
@@ -54,19 +55,42 @@ if(guess===randomNumber){
 
 function displayGuess(guess){
       userInput.value=''
-      guessSlot.innerHTML+=`${guess} `
-      numGuess++;
-      remaining.innerHTML=`${11-numGuess}`
+      guessSlot.innerHTML+=`${guess}  `
+      numGuess++
+      let rem=Math.max(0,11-numGuess)
+      remaining.innerHTML=`${rem}`
 }
 
 function displayMessage(message){
-     lowOrHi.innerHTML=`<h2>${message}</h2>`
+    const element = document.querySelector('.lowOrHi');
+    if (element) {
+        element.innerHTML = `<h2>${message}</h2>`;
+    } else {
+        console.error("Element with class 'lowOrHi' not found");
+    }
 }
 
 function endGame(){
     userInput.value=''
+    userInput.setAttribute('disabled','')
+    p.classList.add('button')
+    p.innerHTML=`<h2 id="newGame">Start new Game</h2>`
+    startOver.appendChild(p)
+    playGame=false
+    newGame()
     
 }
 function newGame(){
+    const newGameButton=document.querySelector('#newGame')
+    newGameButton.addEventListener('click',function(e){
+             randomNumber=parseInt(Math.random()*100+1)
+             prevGuess=[]
+             numGuess=1
+             guessSlot.innerHTML=''
+             remaining.innerHTML=`${11-numGuess}`
+             userInput.removeAttribute('disabled')
+             startOver.removeChild(p)
+             playGame=true
+    })
 
 }
